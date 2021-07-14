@@ -1,0 +1,17 @@
+.top{
+    text-align: center;
+    justify-content: left;
+    color: white;
+    background: purple;
+    height: 8vh;
+    display: flex;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: auto;
+
+    img{
+        height: 50px;
+        padding-left: 240px;
+        padding-top: 10px;
+    }
+}
