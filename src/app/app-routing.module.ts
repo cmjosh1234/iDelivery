@@ -2,26 +2,47 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
-import { ShopsComponent} from './pages/shops/shops.component';
+import { ShopsComponent } from './pages/shops/shops.component';
 import { AddshopComponent } from './pages/addshop/addshop.component';
-import { ProductComponent } from './pages/product/product.component';
-import { OrdersComponent } from './pages/orders/orders.component';
-import { TabBarsComponent } from './pages/tab-bars/tab-bars.component';
-import { GalleryComponent } from './pages/gallery/gallery.component'
-import { AboutShopComponent } from './pages/about-shop/about-shop.Component'
+
+
+
+
 
 const routes: Routes = [
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
-  { path: '',redirectTo: 'home',pathMatch: 'full'},
+  { path: '',redirectTo: 'login',pathMatch: 'full'},
   { path: 'login', component:LoginComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'shops', component: ShopsComponent },
+  { path: 'shops', component:ShopsComponent },
   {path:'addshop',component:AddshopComponent},
-  {path:'product',component:ProductComponent},
-  {path:'orders',component:OrdersComponent},
-  {path:'tab-bars',component:TabBarsComponent},
-  {path:'gallery',component:GalleryComponent},
-  {path:'about-shop',component:AboutShopComponent},
+  {
+    path: 'tabs',
+    loadChildren: () => import('./pages/tab-bars/tab-bars.module').then( m => m.TabBarsPageModule)
+  },
+  {
+    path: 'gallery',
+    loadChildren: () => import('./pages/gallery/gallery.module').then( m => m.GalleryPageModule)
+  },
+  {
+    path: 'aboutshop',
+    loadChildren: () => import('./pages/aboutshop/aboutshop.module').then( m => m.AboutshopPageModule)
+  },
+  {
+    path: 'orders',
+    loadChildren: () => import('./pages/orders/orders.module').then( m => m.OrdersPageModule)
+  },
+  {
+    path: 'products',
+    loadChildren: () => import('./pages/products/products.module').then( m => m.ProductsPageModule)
+  },
+  {
+    path: 'shop',
+    loadChildren: () => import('./pages/shop/shop.module').then( m => m.ShopPageModule)
+  }
+
+
+  
   
 ];
 
