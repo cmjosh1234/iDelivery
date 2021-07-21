@@ -13,7 +13,7 @@ export class LoginPage implements OnInit {
 
   btnDisabled = false;
   error: any;
-  type = 'client';
+  type = 'buyer';
   btnText = 'Login';
   processing = false;
   userProfile:any;
@@ -71,5 +71,7 @@ export class LoginPage implements OnInit {
   loginUser(password, email) {
     return this.fireAuth.signInWithEmailAndPassword(email, password);
   }
-
+  goToSignup(){
+    this.router.navigate(['/signup'])
+  }
 }
