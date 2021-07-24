@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { ShopsComponent } from './pages/shops/shops.component';
-import { AddshopComponent } from './pages/addshop/addshop.component';
+
 
 
 
@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   { path: '',redirectTo: 'login',pathMatch: 'full'},
   { path: 'shops', component:ShopsComponent },
-  {path:'addshop',component:AddshopComponent},
+  
   
   {
     path: 'tabs',
@@ -46,6 +46,10 @@ const routes: Routes = [
   {
     path: 'addshop',
     loadChildren: () => import('./pages/addshop/addshop.module').then( m => m.AddshopPageModule)
+  },
+  {
+    path: 'shops',
+    loadChildren: () => import('./pages/shops/shops.module').then( m => m.ShopsPageModule)
   }
 
 

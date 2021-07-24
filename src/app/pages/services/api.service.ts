@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
+//this is auto imported
 import { AngularFirestore } from '@angular/fire/firestore';
+//commicates with database
 import { AngularFireStorage } from '@angular/fire/storage';
+//communicates with our online bucket for file storage
 
 @Injectable({
   providedIn: 'root'
