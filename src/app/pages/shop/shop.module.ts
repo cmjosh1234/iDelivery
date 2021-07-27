@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
+import { Routes, RouterModule } from '@angular/router';
 
 import { ShopPage } from './shop.page';
 import { GalleryPage } from './gallery/gallery.page';
 import { ProductsPage } from './products/products.page';
 import { AboutshopPage } from './aboutshop/aboutshop.page';
 import { OrdersPage } from './orders/orders.page';
+
 
 const routes: Routes = [
   {
@@ -68,14 +69,16 @@ const routes: Routes = [
   }
 ];
 
+// ,,,ProductsPage,OrdersPage,GalleryPage,AboutshopPage
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+   
   ],
-  declarations: [ShopPage,GalleryPage,ProductsPage,AboutshopPage,OrdersPage]
+  declarations: [ShopPage,ProductsPage,OrdersPage,GalleryPage,AboutshopPage]
 })
 export class ShopPageModule {}
