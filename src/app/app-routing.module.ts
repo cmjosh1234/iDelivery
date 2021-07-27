@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { ShopsComponent } from './pages/shops/shops.component';
 
 
 
@@ -8,7 +7,6 @@ import { ShopsComponent } from './pages/shops/shops.component';
 const routes: Routes = [
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   { path: '',redirectTo: 'login',pathMatch: 'full'},
-  { path: 'shops', component:ShopsComponent },
   
   
   {
@@ -50,6 +48,10 @@ const routes: Routes = [
   {
     path: 'shops',
     loadChildren: () => import('./pages/shops/shops.module').then( m => m.ShopsPageModule)
+  },
+  {
+    path: 'modal',
+    loadChildren: () => import('./pages/modal/modal.module').then( m => m.ModalPageModule)
   }
 
 
