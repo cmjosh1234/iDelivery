@@ -6,8 +6,6 @@ import { IonicModule } from '@ionic/angular';
 
 import { AboutshopPageRoutingModule } from './aboutshop-routing.module';
 
-import { AboutshopPage } from './aboutshop.page';
-
 @NgModule({
   imports: [
     CommonModule,
@@ -15,7 +13,6 @@ import { AboutshopPage } from './aboutshop.page';
     IonicModule,
     AboutshopPageRoutingModule
   ],
-  declarations: [AboutshopPage],
  
   
 })
